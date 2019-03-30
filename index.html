@@ -1,0 +1,124 @@
+<!DOCTYPE>
+<html>
+<!--
+/*
+* by Kueiapp.com
+* all rights preserved.
+*/
+-->
+<head>
+
+<meta charset="utf-8">
+<!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<!-- header --> 
+<title>Kuei WoT Demo</title>
+<!-- Favicon for website -->
+<link rel="icon" type="image/png" href="fhttps://iot.kueiapp.com/icons/32.png"/>
+<link rel="shortcut icon" type="image/png" href="https://iot.kueiapp.com/icons/32.png"/>
+<!-- Bootstrap Core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet"> 
+<!-- <link href="https://bootswatch.com/3/cosmo/bootstrap.min.css" rel="stylesheet"> -->
+<!-- Webduino API -->
+<script src="https://webduino.io/components/webduino-js/dist/webduino-all.min.js"></script>
+<script src="https://blockly.webduino.io/webduino-blockly.js"></script>
+
+<style>
+/*
+* by Kueiapp.com
+* all rights preserved.
+*/
+  body{
+      background-color: #eee;
+  }
+  .navbar {
+    border-radius: 0px; 
+  }
+  .navbar-brand {
+      top: -5px;
+      position: relative;
+  }
+  footer{
+      background-color: #262626;
+      color:white;
+      padding: 10px;
+  }
+  .card {
+    margin-bottom: 10px;
+    /*position: relative;*/
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    min-height: 285px;
+  }
+</style>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://kueiapp.com">
+        <img src="https://iot.kueiapp.com/icons/72.png" 
+            width="33"
+            height="33"
+            alt="葵 Kuei app"/> 
+      </a>
+      <a class="navbar-brand" href="#" id="add-device-btn">物聯網好好玩</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<section class="col-md-4">
+    <header id="openwheather" class="myBlock">
+        <h4>
+            <img class="weathericon" height="50"/>
+            <font class="desp">Local Temperature</font>
+        </h4>
+        <article>
+            <font id="Ltemp" class="desp">Ltemp</font> - <font id="Htemp" class="desp">Htemp</font>
+            <sup>o</sup>C
+        </article>
+        <article><font class="temp">temp</font><sup>o</sup>C</article>
+        <article><font class="humid">humid</font>%</article>
+        <article>
+            <h5 class="location">loc</h5>
+            <div id="map"></div>
+        </article>
+    </header>
+</section>
+
+<section class="col-md-8">
+    <div id="devices" style="overflow-x: auto">
+        <div class="col-lg-4 col-md-6">
+          <div id="card'+_idx+'" class="card">
+            <h4 class="desp">教室</h4>
+            <h3><font class="temp" id="temp_data"></font> <sup>o</sup>C</h3>
+            <h3><font class="humid" id="humid_data"></font> %</h3>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+  <div class="container">
+      <div class="row text-center">
+        <p>Powered by <a href="http://kueiapp.com">Kueiapp.com</a><br/></p>
+      </div>
+  </div>
+</footer>
+  
+</div>
+<!-- container -->
+
+<script src="app.js"></script>
+
+</body>
+</html>
